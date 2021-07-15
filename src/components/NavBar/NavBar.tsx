@@ -63,7 +63,7 @@ const NavBar: React.FC<PropsFromRedux> = props => {
             <a href="#resume">Resume</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact Me</a>
-            <a href="https://github.com/barun1607/live_personal_website" target="_blank" rel="noreferrer">Source Code</a>
+            <a href="https://github.com/barun1607/portfolio" target="_blank" rel="noreferrer">Source Code</a>
           </div>
         </div>
       </nav>

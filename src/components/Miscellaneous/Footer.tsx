@@ -12,7 +12,7 @@ const Footer: React.FC<PropsFromRedux> = (props) => {
 
   return (
     <div className="footer dummy" ref={footerRef}>
-      <p>Built with ❤️ using React and Redux <br /><a href="https://github.com/barun1607/live_personal_website" target="_blank" rel="noreferrer">Source Code</a></p>
+      <p>Built with ❤️ using React and Redux <br /><a href="https://github.com/barun1607/footer" target="_blank" rel="noreferrer">Source Code</a></p>
     </div>
   );
 }
