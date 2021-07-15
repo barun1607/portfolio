@@ -18,7 +18,6 @@ const Contact: React.FC<PropsFromRedux> = (props) => {
   const messageRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    console.log(isVisible);
     changeWithState(isVisible, containerRef, 'dummy', 'show-form', 'show-form');
   }, [isVisible, containerRef])
 
