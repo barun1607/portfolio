@@ -1,0 +1,109 @@
+.navbar {
+  position: fixed;
+  right: 0;
+  height: 100%;
+  width: 0%;
+  max-width: 250px;
+  overflow: hidden;
+  z-index: 50;   
+  box-shadow: 0 0 10px 0 hsl(300, 1%, 28%);
+}
+
+.outer-div {  
+  height: 100%;
+  width: 100%;
+  background-color: white;   
+}
+
+.outer-div div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.outer-div div a {
+  color: var(--light-text-color);
+  text-decoration: none;
+  margin: 3vmin;  
+  font-size: clamp(16px, 24px, 32px); 
+  transition: transform 0.2s; 
+  white-space: nowrap;
+}
+
+.close-nav-button {
+  border: none;
+  cursor: pointer;
+  width: 0;
+  margin: 3vmin; 
+  font-size: 30px;
+  background: none;
+  color: currentColor;
+  position: relative;
+  left: 0;
+}
+
+.outer-div div a:hover {
+  transform: translateY(-5px);
+}
+
+.open-nav {
+  animation: open-nav calc(var(--transition-time) / 1.5) ease-out forwards;
+}
+
+.close-nav {
+  animation: close-nav calc(var(--transition-time) / 1.5) ease-out forwards;
+}
+
+@keyframes open-nav {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 25%;
+  }
+}
+
+@keyframes close-nav {
+  0% {
+    width: 25%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;  
+    height: max-content;
+    width: 100%;
+    max-width: 100%;
+    transform: translateY(-105%);
+    transition: transform 0.15s ease-out;
+    transform-origin: top;
+  }
+
+  @keyframes open-nav {
+    0% {
+      transform: translateY(-105%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes close-nav {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-105%);
+    }
+  }
+
+  .close-nav-button {
+    left: 86vw;
+  }
+}

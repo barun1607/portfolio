@@ -1,0 +1,50 @@
+.footer {
+  position: relative;
+  height: 12vh;
+  width: 100%;
+  background-color: white;
+  z-index: 35;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-text-color);
+  text-align: center;
+}
+
+.footer p {
+  font-weight: bold;
+}
+
+.footer p a {
+  color: currentColor;
+}
+
+.turn-footer-dark {
+  animation: turn-footer-dark var(--transition-time) linear forwards;
+}
+
+.turn-footer-light {
+  animation: turn-footer-light var(--transition-time) linear forwards;
+}
+
+@keyframes turn-footer-dark {
+  from {
+    background-color: white;
+    color: var(--light-text-color);
+  }
+  to {
+    background-color: black;
+    color: var(--dark-text-color);
+  }
+}
+
+@keyframes turn-footer-light {
+  to {
+    background-color: white;
+    color: var(--light-text-color);
+  }
+  from {
+    background-color: black;
+    color: var(--dark-text-color);
+  }
+}

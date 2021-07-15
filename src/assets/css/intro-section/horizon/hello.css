@@ -1,0 +1,51 @@
+.hello {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: var(--secondary-font);
+}
+
+.hello div {
+  font-size: clamp(4em, 5em, 7em);
+  position: relative;
+  transition: transform 0.2s;
+  cursor: default;
+}
+
+.hello div:hover {
+  transform: translateY(-10px);
+}
+
+.intro {
+  font-family: var(--secondary-font);
+  font-size: clamp(2em, 2.5em, 4em);
+  text-align: left;
+  width: 100%;
+}
+
+#IAV {
+  position: relative;
+  cursor: default;
+  transition: transform 0.2s;
+}
+
+#IAV:hover {
+  transform: translateY(-10px);
+}
+
+@media screen and (max-width: 650px) {
+  .hello div {
+    margin-top: 10vh;
+    font-size: clamp(2em, 3em, 4em);
+  }
+
+  .intro {
+    text-align: center;
+    font-size: clamp(1em, 2em, 3em);
+  }
+
+  #IAV {
+    margin: 2vmin;
+  }
+}

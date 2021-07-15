@@ -1,0 +1,8 @@
+.sun-in svg {
+  position: relative;
+  width: 16vmax;
+  fill: var(--dark-text-color);
+  filter: drop-shadow(0 0 5px hsl(0, 0%, 100%));
+  animation: rotate 30s linear infinite;
+  opacity: 1;
+}

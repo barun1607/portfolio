@@ -1,0 +1,57 @@
+.spinner-container {
+  width: 100vw;
+  height: 100vh;
+  background: var(--gradient);
+  background-size: 100% 400%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.spinner-blur {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  filter: blur(100px);
+}
+
+.spinner {
+  width: 25vmax;
+  height: 25vmax;
+  align-self: center;
+  /* transform: translate(-50%, -50%); */
+  transform-style: preserve-3d;
+  animation: rotate-spinner 6s linear infinite;
+}
+
+@keyframes rotate-spinner {
+  to {
+    transform: rotateY(360deg) rotateX(360deg);
+  }  
+}
+
+.spinner-div {
+  width: 90%;
+  height: 90%;
+  border: 5px solid white;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.spinner-div:nth-child(1) {
+  transform: rotateY(45deg);
+}
+
+.spinner-div:nth-child(2) {
+  transform: rotateY(90deg);
+}
+
+.spinner-div:nth-child(3) {
+  transform: rotateY(135deg);
+}
+
+.spinner-div:nth-child(4) {
+  transform: rotateY(180deg);
+}

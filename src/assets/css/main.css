@@ -1,0 +1,40 @@
+@font-face {
+  font-family: Days One;
+  src: url('../fonts/DaysOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: Mina;
+  src: url('../fonts/Mina-Regular.ttf');
+}
+
+:root {
+  font-family: Mina;
+  font-size: 16px;
+  --primary-font: Mina;
+  --secondary-font: Days One;
+  --transition-time: 1s;
+  --transition-time-long: 1s;
+  --gradient: linear-gradient(180deg, hsl(204, 86%, 86%), hsl(209, 97%, 47%), hsla(272, 83%, 38%, 1), hsla(288, 100%, 19%, 1));
+  --light-text-color: hsl(209, 97%, 47%);
+  --dark-text-color: lightgoldenrodyellow;
+  --dark-bg-color: hsl(274,85%,33%);
+  --light-bg-color: hsla(204, 100%, 93%, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.dummy {
+  --dummy: foo;
+}
+
+

@@ -1,0 +1,243 @@
+.contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: fit-content;
+  font-size: clamp(1rem, 1.25rem, 1.5rem);  
+  width: 90%;
+  margin: 5vh 4vmax;
+  filter: opacity(0);
+  transform: translateY(-50px);
+}
+
+.show-form {
+  animation: show-form calc(var(--transition-time) / 3) linear forwards;
+}
+
+@keyframes show-form {
+  to {
+    filter: opacity(1);
+    transform: translateY(0);
+  }
+}
+
+.contact-form {
+  font-size: clamp(0.5rem, 1rem, 1.5rem);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: fit-content;
+  color: var(--light-text-color);
+  background-color: white;
+  border-radius: 30px;
+  padding: 5vh 4vmin;
+}
+
+.turn-form-dark form {
+  animation: turn-form-dark var(--transition-time) linear forwards;
+}
+
+.turn-form-light form {
+  animation: turn-form-light var(--transition-time) linear forwards;
+}
+
+@keyframes turn-form-dark {
+  to {
+    color: var(--dark-text-color);
+    background-color: black;
+  }
+}
+
+@keyframes turn-form-light {
+  from {
+    color: var(--dark-text-color);
+    background-color: black;
+  }
+  to {
+    color: var(--light-text-color);
+    background-color: white;
+  }
+}
+
+.contact-form form label {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.input-div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2vmin;
+  width: 100%;
+}
+
+.input-div input:focus {
+  outline: none;
+}
+
+.input-div textarea:focus {
+  outline: none;
+}
+
+.input-div-submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 2vmin;
+  width: 100%;
+}
+
+.input-div-submit input[type="submit"] {
+  font-size: 1.2rem;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  color: currentColor;
+  font-weight: 600;
+  font-family: var(--primary-font);
+  border: 2px solid currentColor;
+  background-color: transparent;
+  transition: transform 0.2s linear;
+}
+
+.input-div-submit input[type="submit"]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px 0 currentColor;
+}
+
+
+.input-div textarea,
+.input-div input[type="number"],
+.input-div input[type="text"],
+.input-div input[type="email"] {
+  color: currentcolor;
+  font-family: var(--primary-font);
+  border: none;
+  font-size: 1.2rem;
+  background-color: var(--light-bg-color);
+  width: 95%;
+  padding: 10px 5px;
+  border-radius: 10px;
+}
+
+.input-div textarea:focus,
+.input-div input[type="number"]:focus,
+.input-div input[type="text"]:focus,
+.input-div input[type="email"]:focus {
+  box-shadow: 0 0 10px 0 currentColor;
+}
+
+.input-div textarea::placeholder,
+.input-div input[type="number"]::placeholder,
+.input-div input[type="text"]::placeholder,
+.input-div input[type="email"]::placeholder {
+  color: rgb(150, 148, 148);
+}
+
+.input-div textarea {
+  resize: none;
+  margin-bottom: 1vmin;
+  height: auto;
+}
+
+.turn-input-light textarea,
+.turn-input-light input[type="number"],
+.turn-input-light input[type="text"],
+.turn-input-light input[type="email"] {
+  animation: turn-input-light var(--transition-time) linear forwards;
+}
+
+.turn-input-dark textarea,
+.turn-input-dark input[type="number"],
+.turn-input-dark input[type="text"],
+.turn-input-dark input[type="email"] {
+  animation: turn-input-dark var(--transition-time) linear forwards;
+}
+
+@keyframes turn-input-dark {
+  from {
+    background-color: var(--light-bg-color);
+  }
+  to {
+    background-color: var(--dark-bg-color);
+  }
+}
+
+@keyframes turn-input-light {
+  from {
+    background-color: var(--dark-bg-color);
+  }
+  to {
+    background-color: var(--light-bg-color);
+  }
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.social-icons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-icons-container div{
+  margin: 1vmax 0;
+}
+
+.social-icons-heading {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons-container div svg {
+  margin-right: 2vmin;
+  width: clamp(30px, 50px, 60px);
+  height: clamp(30px, 50px, 60px);
+}
+
+.profile-pic {
+  overflow: hidden;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 50%;
+}
+
+.profile-pic img {
+  width: 40vmin;
+  height: 40vmin;
+  filter: brightness(1.2);
+}
+
+@media screen and (max-width: 650px) {
+  .profile-pic {
+    position: relative;
+    left: 50%;
+    transform: translateX(-48%);
+  }
+
+  .profile-pic img {
+    width: 60vmin;
+    height: 60vmin;
+    max-height: 250px;
+    max-width: 250px;
+  }
+
+  .contact-form form {
+    width: 100%;
+    margin: 4vmin;
+  }
+}

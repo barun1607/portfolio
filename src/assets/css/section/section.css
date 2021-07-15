@@ -1,0 +1,86 @@
+.section {
+  min-height: 100vh;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 30;
+}
+
+.section-heading {
+  text-transform: uppercase;
+  font-family: var(--secondary-font);
+  margin-top: 5vh;
+}
+
+.section-background:nth-child(even) {
+  background-color: white;
+  color: var(--light-text-color);
+}
+
+.section-background:nth-child(odd) {
+  background: var(--gradient);
+  background-size: 100% 400%;
+  color: white;
+}
+
+.turn-section-dark:nth-child(even) {
+  animation: turn-section-dark-odd var(--transition-time) linear forwards;
+}
+
+.turn-section-dark:nth-child(odd) {
+  animation: turn-section-dark-even var(--transition-time) linear forwards;
+}
+
+.turn-section-light:nth-child(even) {
+  animation: turn-section-light-odd var(--transition-time) linear forwards;
+}
+
+.turn-section-light:nth-child(odd) {
+  animation: turn-section-light-even var(--transition-time) linear forwards;
+}
+
+@keyframes turn-section-dark-odd {
+  0% {
+    background-color: white;
+    color: var(--light-text-color); 
+  }
+  100% {
+    background-color: black;
+    color: var(--dark-text-color); 
+  }
+}
+
+@keyframes turn-section-light-odd {  
+  0% {
+    background-color: black;
+    color: var(--dark-text-color); 
+  }
+  100% {
+    background-color: white;
+    color: var(--light-text-color); 
+  }
+}
+
+@keyframes turn-section-dark-even {
+  0% {
+    background-position: 0% 0%;
+    color: white;
+  }
+  100% {
+    background-position: 0% 100%;
+    color: var(--dark-text-color);
+  }
+}
+
+@keyframes turn-section-light-even {  
+  0% {
+    background-position: 0% 100%;
+    color: var(--dark-text-color);
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}

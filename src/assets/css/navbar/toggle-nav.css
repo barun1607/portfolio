@@ -1,0 +1,48 @@
+.toggle-nav {
+  position: fixed;
+  right: 0;
+  z-index: 35;
+  margin: 4vmin;
+  color: var(--light-text-color);
+  cursor: pointer;
+}
+
+.toggle-nav svg {
+  transform: scale(0.7);  
+  fill: currentColor;
+}
+
+.toggle-nav {
+  background: none;
+  box-shadow: none;
+  border: none;
+}
+
+.turn-toggle-dark {
+  animation: turn-toggle-dark var(--transition-time) linear forwards;
+}
+
+.turn-toggle-light {
+  animation: turn-toggle-light var(--transition-time) linear forwards;
+}
+
+@keyframes turn-toggle-dark {
+  0% {
+    color: var(--light-text-color);
+  }
+  100% {
+    color: var(--dark-text-color);
+    filter: drop-shadow(0 0 2px white);
+  }
+}
+
+@keyframes turn-toggle-light {
+  0% {
+    color: var(--dark-text-color);
+    filter: drop-shadow(0 0 2px white);
+  }
+  100% {
+    color: var(--light-text-color);
+  }
+}
+

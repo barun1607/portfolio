@@ -1,0 +1,67 @@
+.resume-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+  filter: opacity(0);
+  transform: translateY(-50px);
+}
+
+.resume {
+  overflow-y: scroll;
+  height: 70vh;
+  width: 80%;
+  margin-top: 4vmin;
+  scrollbar-width: thin;
+}
+
+.resume img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.resume-container a {
+  text-decoration: none;
+  padding: 2vmin;
+  color: currentColor;
+  font-size: clamp(1rem, 1.5rem, 2rem);
+  margin-top: 1vmin;
+  transition: transform 0.2s linear;
+}
+
+.resume-container a:hover {
+  transform: translateY(-10px);
+}
+
+.resume-container a svg{
+  fill: currentColor;
+  width: clamp(1rem, 1.5rem, 2rem);
+  height: clamp(1rem, 1.5rem, 2rem);
+}
+
+.resume::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+.resume::-webkit-scrollbar-thumb {
+  background-color: currentColor;
+  border-radius: 5px;
+}
+
+.show-resume {
+  animation: show-resume calc(var(--transition-time) / 3) linear forwards;
+}
+
+@keyframes show-resume {
+  to {
+    filter: opacity(1);
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .resume {
+    height: unset;
+  }
+}

@@ -1,0 +1,80 @@
+.waves {
+  flex-grow: 1.2;
+  z-index: 1;
+}
+
+.wave {
+  position: absolute;
+  top: 5px;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url('../../img/wave.png');
+  background-repeat: repeat no-repeat;  
+}
+
+.waves-light {
+  filter: brightness(1);
+}
+
+.turn-waves-dark {
+  animation: turn-waves-dark var(--transition-time) linear forwards;
+}
+
+.turn-waves-light {
+  animation: turn-waves-light var(--transition-time) linear forwards;
+}
+
+.wave-1 {
+  opacity: 0.5;
+  animation: wave-animate 30000s linear infinite;
+}
+
+.wave-2 {
+  opacity: 0.75;
+  animation: wave-animate 20000s linear infinite;
+}
+
+.wave-3 {
+  opacity: 0.9;
+  animation: wave-animate 10000s linear infinite;
+}
+
+@keyframes wave-animate {
+  0% {
+    background-position: bottom 0 left 0;
+  }
+  100% {
+    background-position: bottom 0 left 250000%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  @keyframes wave-animate {
+    0% {
+      background-position: bottom 0 left 0;
+    }
+    100% {
+      background-position: bottom 0 left 100000%;
+    }
+  }
+}
+
+@keyframes turn-waves-dark {
+  0% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(0);
+  }
+}
+
+@keyframes turn-waves-light {
+  0% {
+    filter: brightness(0);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}

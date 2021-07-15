@@ -1,0 +1,99 @@
+.about {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  font-size: clamp(1rem, 1.25rem, 1.5rem);
+  margin: 0 4vmax;
+}
+
+.about-text {
+  flex: 3;
+  text-align: left;
+  font-size: clamp(0.5rem, 1rem, 1.5rem);
+  filter: opacity(0);
+  transform: translateY(-50px);
+  margin: 2vmin;
+}
+
+.about-icons {
+  flex: 3;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  margin: 2vmin;
+}
+
+.vertical-divider {
+  margin: 0 20px;
+  flex: 0.008;
+  width: 4px;
+  height: 1fr;
+  background-color: currentColor;
+  margin: 2vmin;
+  filter: opacity(0);
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 2vmin 0;
+  align-items: center;
+}
+
+.icon-container div {
+  filter: opacity(0);
+  transition: transform 0.2s linear;
+  transform: translateY(-20px);
+  margin: 1vmax 0;
+}
+
+.icon-container div svg {
+  margin-right: 2vmin;
+  width: clamp(30px, 50px, 60px);
+  height: clamp(30px, 50px, 60px);
+}
+
+.icon-heading {
+  filter: opacity(0);
+  text-transform: capitalize;
+  font-family: var(--secondary-font);
+  font-size: clamp(0.5rem, 1rem, 1.5rem);
+}
+
+.show-icons {
+  animation: show-icons calc(var(--transition-time) / 3) linear forwards;
+}
+
+.show-icons-alt div {
+  animation: show-icons calc(var(--transition-time) / 3) linear forwards;
+}
+
+@keyframes show-icons {
+  to {
+    filter: opacity(1);
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .about {
+    flex-direction: column;
+    margin-top: 2vh;
+  }
+
+  .about-icons {
+    margin: 0;
+    margin-top: 2vh;
+  }
+
+  .about-text {
+    margin: 0;
+    flex: 3;
+    text-align: left;
+  }
+
+  .vertical-divider {
+    display: none;
+  }
+}
