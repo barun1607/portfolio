@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4fddf425.chunk.css",
+    "main.js": "/static/js/main.d94d4058.chunk.js",
+    "main.js.map": "/static/js/main.d94d4058.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.6cbf6aa0.js",
+    "runtime-main.js.map": "/static/js/runtime-main.6cbf6aa0.js.map",
+    "static/js/2.392bb280.chunk.js": "/static/js/2.392bb280.chunk.js",
+    "static/js/2.392bb280.chunk.js.map": "/static/js/2.392bb280.chunk.js.map",
+    "static/js/3.8446ad2f.chunk.js": "/static/js/3.8446ad2f.chunk.js",
+    "static/js/3.8446ad2f.chunk.js.map": "/static/js/3.8446ad2f.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.4fddf425.chunk.css.map": "/static/css/main.4fddf425.chunk.css.map",
+    "static/js/2.392bb280.chunk.js.LICENSE.txt": "/static/js/2.392bb280.chunk.js.LICENSE.txt",
+    "static/media/main.css": "/static/media/Mina-Regular.16ddf43c.ttf",
+    "static/media/VARUN_PANDEY.5f934106.png": "/static/media/VARUN_PANDEY.5f934106.png",
+    "static/media/waves.css": "/static/media/wave.5fe38509.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6cbf6aa0.js",
+    "static/js/2.392bb280.chunk.js",
+    "static/css/main.4fddf425.chunk.css",
+    "static/js/main.d94d4058.chunk.js"
+  ]
+}
