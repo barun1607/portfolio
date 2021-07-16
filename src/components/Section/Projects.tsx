@@ -33,7 +33,7 @@ const Projects: React.FC = () => {
   return (
     <div className="projects" ref={containerRef}>
       <p className="projects-text dummy" ref={textRef}>
-        I've worked on, and am still workin on several professional and personal projects. I will list the most recent projects that I've worked on or contributed to here. Also, please check out my <a href="https://github.com/barun1607" target="_blank" rel="noreferrer" style={{ color: "currentcolor" }}>Github Profile</a>, I post many of my personal projects on there.
+        I've worked on, and am still working on several professional and personal projects. I will list the most recent projects that I've worked on or contributed to here. Also, please check out my <a href="https://github.com/barun1607" target="_blank" rel="noreferrer" style={{ color: "currentcolor" }}>Github Profile</a>, I post many of my personal projects on there.
       </p>
       <div className="vertical-divider-2 dummy" ref={dividerRef}></div>
       <div className="projects-list">

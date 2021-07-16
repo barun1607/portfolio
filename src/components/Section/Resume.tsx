@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import VARUN_PANDEY from '../../assets/img/VARUN_PANDEY.png';
+import VARUN_PANDEY_RESUME from "../../assets/pdf/VARUN_PANDEY.pdf";
 import { useElementOnScreen, changeWithState } from '../../assets/ts/helper';
 import '../../assets/css/section/resume.css';
 
@@ -10,7 +11,7 @@ const Resume: React.FC = () => {
     threshold: 0.5
   });
 
-  // const linkRef = useRef<HTMLAnchorElement>(null);
+  const linkRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
     changeWithState(isVisible, containerRef, 'dummy', 'show-resume', 'show-resume');
@@ -21,7 +22,7 @@ const Resume: React.FC = () => {
       <div className="resume">
         <img src={VARUN_PANDEY} alt="" className="resume-img" />
       </div>
-      {/* <a href="../../assets/pdf/VARUN_PANDEY.pdf" download ref={linkRef}>
+      <a href={VARUN_PANDEY_RESUME} download ref={linkRef}>
         <u>Download Resume</u> <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
           viewBox="0 0 29.978 29.978">
           <g>
@@ -93,8 +94,8 @@ const Resume: React.FC = () => {
           <g>
           </g>
         </svg>
-      </a> */}
-    </div>
+      </a>
+    </div >
   )
 }
 
