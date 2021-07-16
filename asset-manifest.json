@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.6e596da5.chunk.css",
-    "main.js": "/portfolio/static/js/main.ef897c8a.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.ef897c8a.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.6cda96d3.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.6cda96d3.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.d6331d23.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.d6331d23.js.map",
     "static/js/2.392bb280.chunk.js": "/portfolio/static/js/2.392bb280.chunk.js",
@@ -14,12 +14,13 @@
     "static/js/2.392bb280.chunk.js.LICENSE.txt": "/portfolio/static/js/2.392bb280.chunk.js.LICENSE.txt",
     "static/media/main.css": "/portfolio/static/media/Mina-Regular.16ddf43c.ttf",
     "static/media/VARUN_PANDEY.5f934106.png": "/portfolio/static/media/VARUN_PANDEY.5f934106.png",
+    "static/media/VARUN_PANDEY.6f0f4466.pdf": "/portfolio/static/media/VARUN_PANDEY.6f0f4466.pdf",
     "static/media/waves.css": "/portfolio/static/media/wave.5fe38509.png"
   },
   "entrypoints": [
     "static/js/runtime-main.d6331d23.js",
     "static/js/2.392bb280.chunk.js",
     "static/css/main.6e596da5.chunk.css",
-    "static/js/main.ef897c8a.chunk.js"
+    "static/js/main.6cda96d3.chunk.js"
   ]
 }
